@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Collection</title>
+    <!-- <link rel="stylesheet" href="styles.css"> Link to external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        nav {
+            background: #e8491d;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+            /* Change color on hover */
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .book-btn {
+            background: #35424a;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+        .book-btn:hover {
+            background: #e8491d;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            /* Shadow effect */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .book-section {
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideIn 0.5s ease-in-out;
+            /* Slide in animation */
+        }
+
+        .book-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* Shadow effect on hover */
+        }
+
+        .book-section img {
+            max-width: 150px;
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .book-section:hover img {
+            transform: scale(1.1);
+            /* Image zoom on hover */
+        }
+
+        .book-info {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 10px;
+        }
+
+        .back-home-btn:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Our Book Collection</h1>
+        <p>Explore different books by clicking on the buttons below!</p>
+        <a href="home.html" class="back-home-btn">Back To Home</a>
+    </header>
+
+    <nav>
+        <a href="#book1">Book 1</a>
+        <a href="#book2">Book 2</a>
+        <a href="#book3">Book 3</a>
+        <a href="#book4">Book 4</a>
+        <a href="#book5">Book 5</a>
+        <a href="#book6">Book 6</a>
+    </nav>
+
+    <div class="button-container">
+        <button class="book-btn"
+            onclick="window.location.href='https://drive.google.com/file/d/1B_HmjqVRA2fG9iK5sSSzjepf4azqTqj5/view?usp=sharing'">Book
+            1</button>
+        <button class="book-btn"
+            onclick="window.location.href='https://drive.google.com/file/d/1-sCfYM_eBB-UpbNCK4m6Qc17S2pQrlh8/view?usp=sharing'">Book
+            2</button>
+        <button class="book-btn"
+            onclick="window.location.href='https://drive.google.com/file/d/1EW5spXMmdB8dbIkNkWUqf20G-fVB-8C8/view?usp=sharing'">Book
+            3</button>
+        <button class="book-btn"
+            onclick="window.location.href='https://drive.google.com/file/d/1vUdKoMoA8W-e1eVbVEsaNIZHHTtXAJOr/view?usp=sharing'">Book
+            4</button>
+        <button class="book-btn"
+            onclick="window.location.href='https://drive.google.com/file/d/1f_dTVygxF-TwAaXfSprGMwoSxv3-jeU4/view?usp=sharing'">Book
+            5</button>
+        <button class="book-btn"
+            onclick="window.location.href='https://drive.google.com/file/d/1_z_-e-Cn60G-safp2DjsWhFcMR0Bloz3/view?usp=sharing'">Book
+            6</button>
+    </div>
+
+    <!-- Book Information Sections -->
+    <main>
+        <section id="book1" class="book-section">
+            <img src="basicagri.png" alt="Basic Agriculture Book Cover">
+            <div class="book-info">
+                <h2>Book 1: Basic Agriculture</h2>
+                <p>"Basic Agriculture" provides essential insights into traditional farming practices, crop cultivation,
+                    and sustainable agriculture techniques.</p>
+            </div>
+        </section>
+
+        <section id="book2" class="book-section">
+            <img src="Hydroponics1241.png" alt="Hydroponics Book Cover">
+            <div class="book-info">
+                <h2>Book 2: Hydroponics</h2>
+                <p>"Hydroponics" introduces the soil-free method of plant cultivation using nutrient-rich water, ideal
+                    for sustainable gardening.</p>
+            </div>
+        </section>
+
+        <section id="book3" class="book-section">
+            <img src="naturalfarm.png" alt="Natural Farming Book Cover">
+            <div class="book-info">
+                <h2>Book 3: Natural Farming</h2>
+                <p>"Natural Farming" explores chemical-free agricultural practices that enhance soil health and promote
+                    eco-friendly crop production.</p>
+            </div>
+        </section>
+
+        <section id="book4" class="book-section">
+            <img src="terracegardenin.png" alt="Terrace Farming Book Cover">
+            <div class="book-info">
+                <h2>Book 4: Terrace Farming</h2>
+                <p>"Terrace Farming" examines the method of cultivating crops on sloped land, creating leveled steps to
+                    prevent soil erosion and maximize space.</p>
+            </div>
+        </section>
+
+        <section id="book5" class="book-section">
+            <img src="vegetablegarden.png" alt="Organic Farming Book Cover">
+            <div class="book-info">
+                <h2>Book 5: Organic Farming</h2>
+                <p>"Organic Farming" discusses the principles of organic agriculture, emphasizing the use of natural
+                    fertilizers and pest control methods.</p>
+            </div>
+        </section>
+
+        <section id="book6" class="book-section">
+            <img src="farmmange.png" alt="Sustainable Agriculture Book Cover">
+            <div class="book-info">
+                <h2>Book 6: Sustainable Agriculture</h2>
+                <p>"Sustainable Agriculture" focuses on farming practices that meet current food needs without
+                    compromising future generations' ability to produce food.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Book Collection. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

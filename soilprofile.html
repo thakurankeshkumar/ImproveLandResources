@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soil Profile of India</title>
+  <style>
+        body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #35424a;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    nav {
+      background: #35424a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: background 0.3s;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .state {
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 0.5s forwards;
+    }
+
+    .state:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .state h3 {
+      background: #35424a;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .soil-profile,
+    .crops,
+    .fertilizers,
+    .pesticides {
+      margin-top: 15px;
+    }
+
+    h4 {
+      color: #35424a;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #35424a;
+      color: #ffffff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    nav {
+      background: #35424a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+
+    .logo h2 {
+      color: #ffffff;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #2c3e50;
+      transform: scale(1.05);
+    }
+
+    nav ul li input[type="text"] {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      margin-left: 15px;
+      outline: none;
+      transition: background 0.3s;
+      width: 200px;
+    }
+
+    nav ul li input[type="text"]:focus {
+      background: #eaeaea;
+    }
+
+    /* Keyframes for animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+
+        nav ul {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+
+        nav ul li input[type="text"] {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <h2>Soil Profile</h2>
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <input type="text" id="search" placeholder="Search for a state..." aria-label="Search for a state">
+      </li>
+    </ul>
+  </nav>
+
+
+  <header>
+    <h1>Soil Profile of India</h1>
+    <p>An overview of soil types, suitable crops, and recommended fertilizers and pesticides for various regions in
+      India.</p>
+  </header>
+
+  <section class="intro">
+    <h2>Soil Types in India</h2>
+    <p>India has a diverse range of soil types that support various crops. Here, we look at different types of soil
+      found across Indian states and the crops they best support.</p>
+  </section>
+
+  <section id="states">
+    <!-- Template for each state -->
+    <div class="state" id="state-maharashtra">
+      <h3>Maharashtra</h3>
+      <div class="soil-profile">
+        <h4>Soil Type: Black Soil</h4>
+        <p>Black soil, also known as Regur soil, is ideal for growing cotton, soybeans, and wheat.</p>
+      </div>
+      <div class="crops">
+        <h4>Suitable Crops:</h4>
+        <ul>
+          <li>Cotton</li>
+          <li>Soybeans</li>
+          <li>Wheat</li>
+        </ul>
+      </div>
+      <div class="fertilizers">
+        <h4>Recommended Fertilizers:</h4>
+        <ul>
+          <li>Urea</li>
+          <li>Phosphate Fertilizers</li>
+          <li>Potash Fertilizers</li>
+        </ul>
+      </div>
+      <div class="pesticides">
+        <h4>Recommended Pesticides:</h4>
+        <p>Use appropriate pesticides like organophosphates for cotton pests. Consider natural pesticides for soybean
+          pest management.</p>
+      </div>
+    </div>
+
+    <!-- Another state example -->
+    <div class="state" id="state-punjab">
+      <h3>Punjab</h3>
+      <div class="soil-profile">
+        <h4>Soil Type: Alluvial Soil</h4>
+        <p>Alluvial soil in Punjab is ideal for growing rice, wheat, and sugarcane.</p>
+      </div>
+      <div class="crops">
+        <h4>Suitable Crops:</h4>
+        <ul>
+          <li>Rice</li>
+          <li>Wheat</li>
+          <li>Sugarcane</li>
+        </ul>
+      </div>
+      <div class="fertilizers">
+        <h4>Recommended Fertilizers:</h4>
+        <ul>
+          <li>Nitrogen Fertilizers</li>
+          <li>Phosphatic Fertilizers</li>
+          <li>Potassium Fertilizers</li>
+        </ul>
+      </div>
+      <div class="pesticides">
+        <h4>Recommended Pesticides:</h4>
+        <p>Pesticides like carbofuran can be used for rice pest control. Natural alternatives are recommended for wheat
+          pest control.</p>
+      </div>
+    </div>
+
+    <div class="state" id="state-up">
+      <h3>Uttar Pradesh</h3>
+      <div class="soil-profile">
+        <h4>Soil Type: Alluvial Soil</h4>
+        <p>Alluvial soil in Uttar Pradesh is ideal for growing wheat, rice, and sugarcane.</p>
+      </div>
+      <div class="crops">
+        <h4>Suitable Crops:</h4>
+        <ul>
+          <li>Wheat</li>
+          <li>Rice</li>
+          <li>Sugarcane</li>
+        </ul>
+      </div>
+      <div class="fertilizers">
+        <h4>Recommended Fertilizers:</h4>
+        <ul>
+          <li>Nitrogen</li>
+          <li>Phosphorus</li>
+          <li>Potassium</li>
+        </ul>
+      </div>
+      <div class="pesticides">
+        <h4>Recommended Pesticides:</h4>
+        <p>Use appropriate pesticides like carbofuran for rice pest control and natural alternatives for wheat.</p>
+      </div>
+    </div>
+    <div class="state" id="state-himachal">
+      <h3>Himachal Pradesh</h3>
+      <div class="soil-profile">
+        <h4>Soil Type: Mountain Soil</h4>
+        <p>Mountain soils in Himachal Pradesh are well-suited for apple, pear, and apricot cultivation.</p>
+      </div>
+      <div class="crops">
+        <h4>Suitable Crops:</h4>
+        <ul>
+          <li>Apples</li>
+          <li>Pear</li>
+          <li>Apricot</li>
+        </ul>
+      </div>
+      <div class="fertilizers">
+        <h4>Recommended Fertilizers:</h4>
+        <ul>
+          <li>Organic Fertilizers</li>
+          <li>Phosphatic Fertilizers</li>
+        </ul>
+      </div>
+      <div class="pesticides">
+        <h4>Recommended Pesticides:</h4>
+        <p>Natural pesticides are preferred to prevent harm to fruit quality.</p>
+      </div>
+    </div>
+
+    <div class="state" id="state-mp">
+      <h3>Madhya Pradesh</h3>
+      <div class="soil-profile">
+        <h4>Soil Type: Black Soil</h4>
+        <p>Black soil, also known as Regur soil, is ideal for growing cotton, wheat, and soybeans.</p>
+      </div>
+      <div class="crops">
+        <h4>Suitable Crops:</h4>
+        <ul>
+          <li>Cotton</li>
+          <li>Wheat</li>
+          <li>Soybeans</li>
+        </ul>
+      </div>
+      <div class="fertilizers">
+        <h4>Recommended Fertilizers:</h4>
+        <ul>
+          <li>Urea</li>
+          <li>Potash</li>
+          <li>Phosphatic Fertilizers</li>
+        </ul>
+      </div>
+      <div class="pesticides">
+        <h4>Recommended Pesticides:</h4>
+        <p>Organophosphate-based pesticides are recommended for cotton pest control.</p>
+      </div>
+    </div>
+
+
+
+
+    <section id="states">
+      <!-- West Bengal -->
+      <div class="state" id="state-west-bengal">
+        <h3>West Bengal</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Alluvial Soil</h4>
+          <p>Alluvial soil in West Bengal is ideal for rice, jute, and tea cultivation.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Jute</li>
+            <li>Tea</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-based Fertilizers</li>
+            <li>Phosphatic Fertilizers</li>
+            <li>Organic Compost</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Use insecticides like pyrethroids for rice pests, and organic options for tea to maintain quality.</p>
+        </div>
+      </div>
+
+      <!-- Tripura -->
+      <div class="state" id="state-tripura">
+        <h3>Tripura</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Lateritic Soil</h4>
+          <p>Red and lateritic soil in Tripura is suitable for growing pineapple, rubber, and bamboo.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Pineapple</li>
+            <li>Rubber</li>
+            <li>Bamboo</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Potash Fertilizers</li>
+            <li>Phosphatic Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Biological pesticides are preferred for eco-friendly pest control in pineapple and bamboo cultivation.</p>
+        </div>
+      </div>
+
+
+
+      <div class="state" id="state-odisha">
+        <h3>Odisha</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Alluvial Soil</h4>
+          <p>The red and alluvial soil in Odisha supports crops like rice, groundnut, and maize.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Groundnut</li>
+            <li>Maize</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-based Fertilizers</li>
+            <li>Potash Fertilizers</li>
+            <li>Organic Manure</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Carbamates and organophosphates are effective for pest management; natural alternatives are encouraged for
+            sustainability.</p>
+        </div>
+      </div>
+
+      <!-- Meghalaya -->
+      <div class="state" id="state-meghalaya">
+        <h3>Meghalaya</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Lateritic Soil</h4>
+          <p>Red and lateritic soil in Meghalaya is ideal for growing oranges, potatoes, and pineapples.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Oranges</li>
+            <li>Potatoes</li>
+            <li>Pineapples</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Potash Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Natural pesticides are recommended for pineapple and orange crops to preserve quality and reduce soil
+            impact.</p>
+        </div>
+      </div>
+
+      <!-- Bihar -->
+      <div class="state" id="state-bihar">
+        <h3>Bihar</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Alluvial Soil</h4>
+          <p>Alluvial soil in Bihar is ideal for wheat, rice, and sugarcane cultivation.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Wheat</li>
+            <li>Rice</li>
+            <li>Sugarcane</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Urea</li>
+            <li>Phosphatic Fertilizers</li>
+            <li>Potassium Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Pesticides like carbofuran are suitable for rice, and natural solutions are encouraged for wheat pest
+            control.</p>
+        </div>
+      </div>
+
+      <!-- Kerala -->
+      <div class="state" id="state-kerala">
+        <h3>Kerala</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Lateritic and Alluvial Soil</h4>
+          <p>The lateritic and alluvial soil in Kerala is suitable for coconut, rice, and rubber.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Coconut</li>
+            <li>Rice</li>
+            <li>Rubber</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Fertilizers</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Potash</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Biopesticides are preferred for rubber and coconut to minimize environmental impact.</p>
+        </div>
+      </div>
+      <div class="state" id="state-tamil-nadu">
+        <h3>Tamil Nadu</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red, Black, and Lateritic Soil</h4>
+          <p>Tamil Nadu's diverse soil types support a variety of crops like rice, sugarcane, and cotton.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Sugarcane</li>
+            <li>Cotton</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-based Fertilizers</li>
+            <li>Phosphatic Fertilizers</li>
+            <li>Organic Manure</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For pest control in rice, organophosphates are recommended. Organic pesticides are suitable for cotton and
+            sugarcane.</p>
+        </div>
+      </div>
+
+      <!-- Haryana -->
+      <div class="state" id="state-haryana">
+        <h3>Haryana</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Alluvial Soil</h4>
+          <p>Alluvial soil in Haryana is suitable for growing wheat, rice, and mustard.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Wheat</li>
+            <li>Rice</li>
+            <li>Mustard</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Urea</li>
+            <li>Phosphorus-based Fertilizers</li>
+            <li>Potassium Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Pesticides like pyrethroids are used for rice, while organic solutions are preferred for mustard.</p>
+        </div>
+      </div>
+
+      <!-- Gujarat -->
+      <div class="state" id="state-gujarat">
+        <h3>Gujarat</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Black and Alluvial Soil</h4>
+          <p>Gujarat's black and alluvial soil is favorable for cotton, groundnut, and bajra.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Cotton</li>
+            <li>Groundnut</li>
+            <li>Bajra (Pearl Millet)</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Potash-based Fertilizers</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Compost</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Carbamates are effective for cotton pests, and organic alternatives are used for groundnut and bajra.</p>
+        </div>
+      </div>
+
+      <!-- Goa -->
+      <div class="state" id="state-goa">
+        <h3>Goa</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Lateritic and Sandy Soil</h4>
+          <p>The lateritic and sandy soil in Goa is ideal for growing coconut, cashew, and paddy.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Coconut</li>
+            <li>Cashew</li>
+            <li>Paddy</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Phosphorus-based Fertilizers</li>
+            <li>Compost</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Biopesticides are preferred for cashew and coconut to preserve soil quality and crop health.</p>
+        </div>
+      </div>
+      <div class="state" id="state-jammu-kashmir">
+        <h3>Jammu & Kashmir</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Mountain and Alluvial Soil</h4>
+          <p>The mountainous and alluvial soil in Jammu & Kashmir supports crops like apples, saffron, and walnuts.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Apples</li>
+            <li>Saffron</li>
+            <li>Walnuts</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Potassium Fertilizers</li>
+            <li>Compost</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For pest management in apple orchards, natural biopesticides and neem oil are recommended to maintain
+            ecological balance.</p>
+        </div>
+      </div>
+
+      <!-- Assam -->
+      <div class="state" id="state-assam">
+        <h3>Assam</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Alluvial and Lateritic Soil</h4>
+          <p>Alluvial and lateritic soils in Assam are suitable for tea, rice, and jute cultivation.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Tea</li>
+            <li>Rice</li>
+            <li>Jute</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-rich Fertilizers</li>
+            <li>Potash Fertilizers</li>
+            <li>Phosphorus-based Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Natural pesticides are preferred for tea, while carbamates are effective for rice pests.</p>
+        </div>
+      </div>
+
+      <!-- Arunachal Pradesh -->
+      <div class="state" id="state-arunachal-pradesh">
+        <h3>Arunachal Pradesh</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Yellow Soil</h4>
+          <p>The red and yellow soil in Arunachal Pradesh is favorable for oranges, millet, and maize.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Oranges</li>
+            <li>Millet</li>
+            <li>Maize</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Compost</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Biopesticides are preferred for oranges, and natural repellents for millet and maize to minimize
+            environmental impact.</p>
+        </div>
+      </div>
+
+      <!-- Andhra Pradesh -->
+      <div class="state" id="state-andhra-pradesh">
+        <h3>Andhra Pradesh</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red, Black, and Alluvial Soil</h4>
+          <p>Andhra Pradesh's soil types support crops like rice, tobacco, and cotton.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Tobacco</li>
+            <li>Cotton</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-based Fertilizers</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Potash Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For rice, carbofuran is effective, while natural pesticides are preferred for cotton to protect soil
+            health.</p>
+        </div>
+      </div>
+      <!-- Jharkhand -->
+      <div class="state" id="state-jharkhand">
+        <h3>Jharkhand</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Lateritic Soil</h4>
+          <p>The red and lateritic soil in Jharkhand is suitable for growing rice, pulses, and maize.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Pulses</li>
+            <li>Maize</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-based Fertilizers</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Organic Manure</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For rice pests, organophosphate-based pesticides are recommended, while pulses benefit from natural
+            biopesticides.</p>
+        </div>
+      </div>
+
+      <!-- Manipur -->
+      <div class="state" id="state-manipur">
+        <h3>Manipur</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Lateritic Soil</h4>
+          <p>Manipur's soil supports crops such as rice, maize, and various vegetables.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Maize</li>
+            <li>Vegetables</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Compost</li>
+            <li>Potash-based Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Neem-based biopesticides are widely used to control pests in rice and vegetables.</p>
+        </div>
+      </div>
+
+      <!-- Mizoram -->
+      <div class="state" id="state-mizoram">
+        <h3>Mizoram</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Yellow Soil</h4>
+          <p>The red and yellow soil in Mizoram is ideal for growing orange, pineapple, and rice.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Orange</li>
+            <li>Pineapple</li>
+            <li>Rice</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Compost</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Organic Manure</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Biopesticides and organic pest control solutions are ideal for the sensitive crops grown in Mizoram.</p>
+        </div>
+      </div>
+
+      <!-- Sikkim -->
+      <div class="state" id="state-sikkim">
+        <h3>Sikkim</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Mountain and Alluvial Soil</h4>
+          <p>Sikkim’s mountain and alluvial soil is suitable for crops like cardamom, ginger, and buckwheat.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Cardamom</li>
+            <li>Ginger</li>
+            <li>Buckwheat</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Compost</li>
+            <li>Phosphorus Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>In Sikkim, organic pesticides and natural solutions are promoted to protect the environment and support
+            organic farming practices.</p>
+        </div>
+      </div>
+      <!-- Telangana -->
+      <div class="state" id="state-telangana">
+        <h3>Telangana</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Black Soil</h4>
+          <p>Telangana's red and black soils support crops like cotton, maize, and turmeric.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Cotton</li>
+            <li>Maize</li>
+            <li>Turmeric</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Urea for Nitrogen</li>
+            <li>Phosphorus-based Fertilizers</li>
+            <li>Potassium-based Fertilizers</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For cotton, pesticides like pyrethroids are effective, while neem oil can be used for maize and turmeric
+            pests.</p>
+        </div>
+      </div>
+
+      <!-- Karnataka -->
+      <div class="state" id="state-karnataka">
+        <h3>Karnataka</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red, Lateritic, and Black Soil</h4>
+          <p>Karnataka's varied soils support crops such as coffee, sugarcane, and ragi.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Coffee</li>
+            <li>Sugarcane</li>
+            <li>Ragi</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-rich Fertilizers</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Organic Compost</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For coffee, fungicides are recommended, while neem-based pesticides are effective for ragi pests.</p>
+        </div>
+      </div>
+
+      <!-- Uttarakhand -->
+      <div class="state" id="state-uttarakhand">
+        <h3>Uttarakhand</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Mountain and Alluvial Soil</h4>
+          <p>Uttarakhand's mountain and alluvial soils are suitable for apples, rice, and wheat.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Apples</li>
+            <li>Rice</li>
+            <li>Wheat</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Manure</li>
+            <li>Potash Fertilizers</li>
+            <li>Compost</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For apple orchards, organic pesticides and natural pest control methods are recommended, while carbamate
+            pesticides work well for rice pests.</p>
+        </div>
+      </div>
+      <!-- Nagaland -->
+      <div class="state" id="state-nagaland">
+        <h3>Nagaland</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Lateritic Soil</h4>
+          <p>The red and lateritic soils in Nagaland are suitable for crops like rice, maize, and pineapple.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Maize</li>
+            <li>Pineapple</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Organic Compost</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Green Manure</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>Biopesticides like neem oil are effective for maize and pineapple, while natural pest deterrents are
+            suggested for rice.</p>
+        </div>
+      </div>
+
+      <!-- Chhattisgarh -->
+      <div class="state" id="state-chhattisgarh">
+        <h3>Chhattisgarh</h3>
+        <div class="soil-profile">
+          <h4>Soil Type: Red and Yellow Soil</h4>
+          <p>Chhattisgarh's red and yellow soils are well-suited for crops such as rice, soybean, and groundnut.</p>
+        </div>
+        <div class="crops">
+          <h4>Suitable Crops:</h4>
+          <ul>
+            <li>Rice</li>
+            <li>Soybean</li>
+            <li>Groundnut</li>
+          </ul>
+        </div>
+        <div class="fertilizers">
+          <h4>Recommended Fertilizers:</h4>
+          <ul>
+            <li>Nitrogen-based Fertilizers</li>
+            <li>Phosphorus Fertilizers</li>
+            <li>Organic Manure</li>
+          </ul>
+        </div>
+        <div class="pesticides">
+          <h4>Recommended Pesticides:</h4>
+          <p>For rice, carbamate-based pesticides are effective, while groundnut and soybean can benefit from organic
+            and microbial pest control solutions.</p>
+        </div>
+      </div>
+
+    </section>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Soil Profile of India</p>
+  </footer>
+
+
+  <script>
+    document.getElementById('search').addEventListener('keyup', function () {
+      let input = this.value.toLowerCase();
+      let states = document.querySelectorAll('.state');
+
+      states.forEach(function (state) {
+        let stateName = state.querySelector('h3').textContent.toLowerCase();
+        if (stateName.includes(input)) {
+          state.style.display = ''; // Show the state
+        } else {
+          state.style.display = 'none'; // Hide the state
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

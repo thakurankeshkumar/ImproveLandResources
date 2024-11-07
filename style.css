@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #F4F4F5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #E2DDDD, #C0B3B3);
+    border-bottom: 2px solid #ccc;
+}
+
+.logo a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    position: relative;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007BFF;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.menu a:hover {
+    color: #007BFF;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.menu a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 550px;
+}
+
+.intro-content {
+    max-width: 600px;
+}
+
+.intro-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.explore-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.explore-button:hover {
+    background-color: #007BFF;
+    transform: translateY(-2px);
+}
+
+.explore-button .arrow-icon {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 310px;
+    transition: transform 0.3s;
+}
+
+.intro-image img:hover {
+    transform: scale(1.05);
+}
+
+.types-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.types-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.types-description {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card a:hover {
+    color: #0056b3;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border-top: 2px solid #007BFF;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+}

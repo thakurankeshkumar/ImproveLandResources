@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="about.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        * {
+            /* font-family: "Poppins", sans-serif;
+    font-weight: 200; */
+            font-style: normal;
+        }
+
+        nav {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 30px;
+        }
+
+        .left {
+            margin-right: 322px;
+        }
+
+        .right {
+            display: flex;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .all {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 480px;
+        }
+
+
+        main {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 480px;
+            overflow: hidden;
+            border-radius: 6px;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .center {
+            font-size: 50px;
+            font-weight: bolder;
+        }
+
+        .new,
+        .new1 {
+            font-size: 25px;
+        }
+
+        .new {
+            font-size: 25px;
+        }
+
+        .new1 {
+            font-size: 25px;
+        }
+
+        .section1 {
+            height: 454px;
+            margin-top: 47px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 120px;
+            background-color: white;
+        }
+
+        .leftside {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 80%;
+            background-color: white;
+            width: 680px;
+            padding: 10px;
+            text-wrap: wrap;
+        }
+
+        .rightside {
+            height: 80%;
+            background-image: url(Land\ Image.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 40%;
+            border: 2px solid black;
+            border-radius: 55px;
+        }
+
+        .rightside:hover {
+            transition: all 1.5s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .div h1 {
+            margin-bottom: 28px;
+            margin-top: -45px;
+            margin-right: 438px;
+            font-size: 40px;
+        }
+
+        .nextdiv p {
+            font-size: 22px;
+        }
+
+
+        .section2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 450px;
+            background-color: #E2DDDD;
+        }
+
+        .title h1 {
+            font-size: 50px;
+        }
+
+        .cardss {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .card1 {
+            width: 390px;
+            height: 115px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .card2 {
+            width: 390px;
+            height: 115px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .card3 {
+            width: 390px;
+            height: 115px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            border-top: 2px solid #007BFF;
+        }
+
+        .leftfooter {
+            padding: 5px;
+        }
+
+        .rightfooter {
+            display: flex;
+            gap: 20px;
+            padding: 5px;
+        }
+
+        .rightfooter a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .rightfooter a:hover {
+            color: #007BFF;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .rightfooter {
+                margin-top: 10px;
+            }
+        }
+
+
+
+
+
+
+
+
+        .menu li a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu li a:hover {
+            color: #007BFF;
+            transform: scale(1.1);
+        }
+
+        .center {
+            transition: transform 0.5s ease;
+        }
+
+        .center:hover {
+            transform: translateY(-5px);
+        }
+
+        .card1,
+        .card2,
+        .card3 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card1:hover,
+        .card2:hover,
+        .card3:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .title h1 {
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .title h1:hover {
+            color: #FF5733;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            transition: all 0.3s ease;
+        }
+
+
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            position: relative;
+        }
+
+        .circle {
+            width: 60px;
+            height: 60px;
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .rightfooter {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 5px;
+            }
+
+            .menu li a {
+                font-size: 14px;
+            }
+
+            main {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            footer {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .leftfooter,
+            .rightfooter {
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 769px) {
+            nav {
+                padding: 15px;
+            }
+
+            .menu li a {
+                font-size: 21px;
+            }
+
+            main {
+                border-radius: 43px;
+                padding: 20px;
+            }
+
+            footer {
+                padding: 20px;
+            }
+        }
+
+
+
+        nav {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 20px;
+            margin: 10px 0;
+            background-color: #E2DDDD;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .left {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .right {
+            display: flex;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .all {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .menu li {
+            transition: color 0.3s ease;
+        }
+
+        .menu li a {
+            padding: 10px 0;
+        }
+
+        .menu li a:hover {
+            color: #007BFF;
+            transform: translateY(-3px);
+        }
+
+        .menu li a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #007BFF;
+            transition: width 0.3s ease;
+            width: 0;
+            margin: auto;
+        }
+
+        .menu li a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu li a {
+                font-size: 18px;
+            }
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            border-radius: 10px;
+            background-color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        nav:hover {
+            transform: translateY(-6px);
+            transition: all 1.9s ease;
+        }
+
+        .nav-links {
+            font-size: 27px;
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-btn,
+        .signup-btn {
+            padding: 8px 16px;
+            font-size: 0.9em;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .signup-btn {
+            background-color: #28a745;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-btn:hover {
+            background-color: #218838;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        main {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .section1,
+        .section2 {
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+        }
+
+        .section1 {
+            animation-delay: 0.5s;
+        }
+
+        .section2 {
+            animation-delay: 1s;
+        }
+
+        footer {
+            animation: slideUp 0.5s forwards;
+            opacity: 0;
+        }
+
+        .card1,
+        .card2,
+        .card3 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card1:hover,
+        .card2:hover,
+        .card3:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu li a {
+            position: relative;
+        }
+
+        .menu li a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #007BFF;
+            width: 0;
+            transition: width 0.3s ease;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .menu li a:hover::after {
+            width: 100%;
+        }
+
+        .us {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .us-title {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .us-cardss {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .us-card {
+            background-color: white;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 300px;
+        }
+
+        .us-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .us-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .us-card p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .custom-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .custom-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a style="text-decoration: none; color: white;" href="index.html">ResourcesHub</a></div>
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="module.html">E MODULES</a></li>
+                <li><a href="soilprofile.html">SOIL PROFILE</a></li>
+                <li><a href="gardening.html">GARDENING</a></li>
+                <li><a href="policies.html">POLICIES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <video autoplay muted loop id="background-video">
+            <source src="coverr-land-covered-in-snow-8067-1080p.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="center">About ResourceHub</div>
+            <div class="new">Empowering learners worldwide with high-quality educational resources</div>
+            <div class="new1">and a supportive community.</div>
+        </div>
+    </main>
+    <section class="section1">
+        <div class="leftside">
+            <div class="div">
+
+                <h1>Our Mission</h1>
+            </div>
+            <div class="nextdiv">
+
+                <p>The mission of ResourceHub is to empower farmers, agriculturalists, and land resource managers with
+                    the knowledge and tools needed for sustainable and responsible land usage. The platform seeks to
+                    provide comprehensive resources on land policies, conservation practices, and agricultural
+                    materials, supporting informed decision-making. Through its soil profiles, farming books, and
+                    equipment marketplace, ResourceHub promotes conservation farming tailored to different regions. The
+                    website aims to be a trusted hub for guidance and resources, fostering sustainable agriculture
+                    practices that protect and enhance land productivity. ResourceHub is committed to advancing
+                    environmentally responsible farming for future generations.
+
+                </p>
+            </div>
+        </div>
+        <div class="rightside">
+        </div>
+    </section>
+    <section class="section2">
+        <div class="title">
+            <h1> Why Choose Us.</h1>
+        </div>
+        <div class="cardss">
+            <div class="card1">
+                <i style="font-size: 26px;" class="fa-solid fa-mobile-screen"></i>
+                <h2>Comprehensive Resources</h2>
+                <p>Access a wide range of high-quality learning materials.</p>
+            </div>
+            <div class="card2">
+                <i style="font-size: 26px;" class="fa-solid fa-user-group"></i>
+                <h2>Supportive Community</h2>
+                <p>Connect with peers and experts in your field of interest.</p>
+            </div>
+            <div class="card3">
+                <i style="font-size: 26px;" class="fa-regular fa-handshake"></i>
+                <h2>Expert-Led Content</h2>
+                <p>Learn from industry professionals and thought leaders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="us">
+        <h1 class="us-title">Developers</h1>
+        <div class="us-cardss">
+            <div class="us-card">
+                <h2>Tejas Rai</h2>
+                <p>Role: Project Manager</p>
+                <p>Backend Developer</p>
+                <button class="custom-button"
+                    onclick="window.open('https://www.linkedin.com/in/tejash-rai-763124292/', '_blank')">View
+                    Profile</button>
+            </div>
+            <div class="us-card">
+                <h2>Ankesh Kumar Thakur</h2>
+                <p>Role: UI/UX Designer</p>
+                <p>Frontend Developer</p>
+                <button class="custom-button"
+                    onclick="window.open('https://www.linkedin.com/in/ankesh-kumar-thakur-132b25324/', '_blank')">View
+                    Profile</button>
+            </div>
+            <div class="us-card">
+                <h2>Marisa Venukumar</h2>
+                <p>Role: Content Writer</p>
+                <button class="custom-button"
+                    onclick="window.open('https://www.linkedin.com/in/venu-kumar-marisa-65770a337/', '_blank')">View
+                    Profile</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="leftfooter">
+            <p>&copy; 2024 ResourceHub All rights reserved.</p>
+        </div>
+        <div class="rightfooter">
+            <a href="#" class="terms">Terms of Service</a>
+            <a href="#" class="privacy">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/dc4701f61d.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

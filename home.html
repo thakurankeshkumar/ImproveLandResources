@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Resources - ResourcesHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            border-radius: 10px;
+            width: 100%;
+            background-color: #333;
+            padding: 15px 30px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .nav-links {
+            font-size: 27px;
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-btn,
+        .signup-btn {
+            padding: 8px 16px;
+            font-size: 0.9em;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .signup-btn {
+            background-color: #28a745;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-btn:hover {
+            background-color: #218838;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+        .intro-section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .explore-button {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .explore-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .nav-links {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideIn 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a style="text-decoration: none; color: white;" href="index.html">ResourcesHub</a></div>
+            <ul class="nav-links"
+                style="display: flex; justify-content: center; align-items: center; margin-right: 40px;">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="module.html">E Modules</a></li>
+                <li><a href="soilprofile.html">Soil Profile</a></li>
+                <li><a href="gardening.html">Gardening</a></li>
+                <li><a href="policies.html">Policies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">Credentials</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <div class="intro-content">
+                <h1>Welcome to ResourcesHub</h1>
+                <p>
+                    Land is our greatest asset, providing the foundation upon which all life thrives. It supports the
+                    food we eat, the homes we live in, and fuels the industries that drive our progress. From fertile
+                    soil to natural resources, land holds the potential to shape our future and that of generations to
+                    come.
+                </p>
+                <button class="explore-button">
+                    Explore Resources
+                    <span class="arrow-icon">&#8594;</span>
+                </button>
+            </div>
+            <div class="intro-image">
+                <img src="Land Image.jpg" alt="Land resources">
+            </div>
+        </section>
+
+        <section class="types-section">
+            <h2>Types of Land Resources</h2>
+            <p class="types-description">
+                India’s land is categorized by its diverse uses, supporting agriculture, conservation, housing,
+                industry, and commerce. Each type plays a vital role in shaping India’s economy, environment, and
+                progress.
+            </p>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-image" style="background-image: url(Agriculture\ land.jpg);"></div>
+                    <div class="card-details">
+                        <h3>Agricultural Land</h3>
+                        <p>Vital for farming and supporting millions of livelihoods through crop cultivation and
+                            livestock rearing.</p>
+                        <a href="https://en.wikipedia.org/wiki/Agricultural_land" target="_blank">Find out more →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url(Forest\ land.webp);"></div>
+                    <div class="card-details">
+                        <h3>Forest Land</h3>
+                        <p>Dedicated to wildlife conservation, maintaining biodiversity, and ecological balance.</p>
+                        <a href="https://en.wikipedia.org/wiki/Forest" target="_blank">Find out more →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url(Residential-Land.jpg);"></div>
+                    <div class="card-details">
+                        <h3>Residential Land</h3>
+                        <p>Provides space for human settlements, supporting housing and community infrastructure.</p>
+                        <a href="https://en.wikipedia.org/wiki/Residential_area" target="_blank">Find out more →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url(Industrial\ Land.webp);"></div>
+                    <div class="card-details">
+                        <h3>Industrial Land</h3>
+                        <p>Designated for industrial purposes, fostering manufacturing, and economic growth.</p>
+                        <a href="https://en.wikipedia.org/wiki/Industrial" target="_blank">Find out more →</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url(Commercial\ Land.jpg);"></div>
+                    <div class="card-details">
+                        <h3>Commercial Land</h3>
+                        <p>Used for business activities, office spaces, and retail, driving commerce and trade.</p>
+                        <a href="https://en.wikipedia.org/wiki/Commercial_property" target="_blank">Find out more →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 ResourcesHub. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Land Resources Shop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f2e4;
+      color: #3d3d29;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #3b552f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      height: 12vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #4b6b3c;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      margin: 0;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      font-size: 23px;
+      color: #e2f2db;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4e5c0;
+      transform: scale(1.1);
+    }
+
+    .intro {
+      padding: 20px;
+      text-align: center;
+      background-color: #f2e3c6;
+      border-radius: 8px;
+      margin: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #tools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .tool {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+      height: fit-content;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .tool:hover {
+      transform: translateY(-5px) scale(2);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      background-color: #e8f5e9;
+      border-color: #a5d6a7;
+    }
+
+    .tool img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .tool h3 {
+      font-size: 1.5em;
+      margin: 10px;
+      color: #3b552f;
+    }
+
+    .tool:hover h3 {
+      color: #2e7d32;
+    }
+
+    .tool p {
+      margin: 10px;
+    }
+
+    .buy-button {
+      width: 60%;
+      padding: 10px;
+      background-color: #a2c58b;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      margin: 20px auto;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .buy-button:hover {
+      background-color: #8eb16d;
+      transform: scale(1.05);
+    }
+
+    footer {
+      color: #fff;
+      background-color: #3b552f;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header,
+    .intro {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .tool {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideIn 0.5s ease forwards;
+      animation-delay: var(--delay);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .buy-button {
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: #8eb16d;
+      transform: scale(1.1) rotate(2deg);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="left" style="color: white; font-size: 23px; font-weight: bold;">ResourcesHub</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Land Resources Shop</h1>
+    <p>Providing high-quality tools and resources to help you care for the land.</p>
+  </header>
+
+  <section class="intro">
+    <h2>Explore Our Essential Tools</h2>
+    <p>Browse our carefully selected tools, perfect for land and soil care. Click on a tool for details and pricing.
+    </p>
+  </section>
+
+  <section id="tools">
+    <!-- Tool 1 -->
+    <div class="tool">
+      <img src="handtowel.jpg" alt="Hand Trowel">
+      <h3>Hand Trowel</h3>
+      <p>Ideal for planting and soil mixing.</p>
+      <p><strong>Price:</strong> INR 249</p>
+      <button class="buy-button"
+        onclick="window.location.href='https://www.amazon.in/Amazon-Brand-Solimo-Sunshine-Paradise/dp/B01N63IONN'">Buy</button>
+    </div>
+
+    <!-- Tool 2 -->
+    <div class="tool">
+      <img src="Pruning Shears.jpg" alt="Pruning Shears">
+      <h3>Pruning Shears</h3>
+      <p class="description">Ideal for trimming branches and shrubs.</p>
+      <p><strong>Price:</strong> INR 195</p>
+      <button class="buy-button"
+        onclick="window.location.href='https://www.amazon.in/Garden-Cutter-Pruning-Shears-Gardening/dp/B0DB4WP14H'">Buy</button>
+    </div>
+
+    <!-- Tool 3 -->
+    <div class="tool">
+      <img src="Garden Fork.jpg" alt="Garden Fork">
+      <h3>Garden Fork</h3>
+      <p class="description">Used for loosening, lifting, and turning soil.</p>
+      <p><strong>Price:</strong> INR 175</p>
+      <button class="buy-button"
+        onclick="window.location.href='https://www.amazon.in/Weeding-Gardening-Preventive-Suitable-GTS076/dp/B0CH9QNYGJ'">Buy</button>
+    </div>
+
+    <!-- Tool 4 -->
+    <div class="tool">
+      <img src="Garden Rake.jpg" alt="Garden Rake">
+      <h3>Garden Rake</h3>
+      <p class="description">Essential for leveling soil and removing debris.</p>
+      <p><strong>Price:</strong> INR 175</p>
+      <button class="buy-button" onclick="window.location.href='#'">Buy</button>
+    </div>
+
+    <!-- Tool 5 -->
+    <div class="tool">
+      <img src="Hand Cultivator.jpg" alt="Hand Cultivator">
+      <h3>Hand Cultivator</h3>
+      <p class="description">Helps to aerate and mix soil in small garden areas.</p>
+      <p><strong>Price:</strong> INR 219</p>
+      <button class="buy-button"
+        onclick="window.location.href='https://www.amazon.in/UGAOO-Durable-Gardening-Hand-Tool/dp/B0BQYX6MLN'">Buy</button>
+    </div>
+
+    <!-- Tool 6 -->
+    <div class="tool">
+      <img src="Garden Gloves.jpg" alt="Garden Gloves">
+      <h3>Garden Gloves</h3>
+      <p class="description">Protects your hands while gardening.</p>
+      <p><strong>Price:</strong> INR 190</p>
+      <button class="buy-button"
+        onclick="window.location.href='https://www.amazon.in/FreshDcart-Washable-Fingertips-Planting-Gardening/dp/B07T2TT733'">Buy</button>
+    </div>
+
+    <!-- Tool 7 -->
+    <div class="tool">
+      <img src="Watering Can.jpg" alt="Watering Can">
+      <h3>Watering Can</h3>
+      <p class="description">Aids in precise and controlled watering.</p>
+      <p><strong>Price:</strong> INR 209</p>
+      <button class="buy-button"
+        onclick="window.location.href='https://www.amazon.in/Ocean-Mart-Watering-Can-Built/dp/B0CVQDP12X'">Buy</button>
+    </div>
+
+    <!-- Tool 8 -->
+    <div class="tool">
+      <img src="spade3.jpg" alt="Garden Spade">
+      <h3>Garden Spade</h3>
+      <p class="description">Perfect for digging and cutting through soil.</p>
+      <p><strong>Price:</strong> INR 679</p>
+      <button class="buy-button"
+        onclick="window.location.href='https://www.amazon.in/Kraft-Seeds-Garden-Tool-KIT013/dp/B01MTV32UR'">Buy</button>
+    </div>
+
+
+
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Land Resources Shop. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
